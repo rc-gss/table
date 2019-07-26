@@ -1,0 +1,64 @@
+@mixin box{ 
+	width: 65px;
+	height: 65px;
+	display: inline-block;
+	padding: 3px 4px;
+	left: 0;
+	right: 0;
+	position: relative;
+}
+
+@mixin insideText {
+	.text__left{
+		font-size: 10px;
+		float: left;
+	}
+	.text__right{
+		font-size: 6px;
+		float: right;
+		text-align: center;
+		.right{
+		}
+	}
+
+	.symbol{
+		margin-top: 10px;
+		line-height: 1;
+		padding: 7px;
+		text-align: center;
+		font-weight: 700;
+		.symbol__name{
+			font-size: 7px;
+		}
+	}
+	.atom{
+		font-size: 7px;
+		position: absolute;
+		bottom: 3px;
+	}
+}
+
+@mixin onHoverImg {
+	width: 100%;
+	background-size: cover;
+	transform: rotate(360deg);
+	transition: transform 1s ease-in;
+	
+	.text__left{
+		display: none;
+	}
+	.text__right{
+		display: none;
+	}
+	.symbol{
+		display: none;
+		.symbol__name{
+			display: none;
+		}
+	}
+	.atom{
+		display: none;
+	}
+}
+
+
